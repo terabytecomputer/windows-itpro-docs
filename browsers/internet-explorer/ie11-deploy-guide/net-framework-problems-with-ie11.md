@@ -17,7 +17,9 @@ If you’re having problems launching your legacy apps while running Internet Ex
 
 1.  **For x86 systems or for 32-bit processes on x64 systems:** Go to the `HKLM\SOFTWARE\MICROSOFT\.NETFramework` registry key and change the **EnableIEHosting** value to **1**.
 
-2.  **For x64 systems or for 64-bit processes on x64 systems:** Go to the `HKLM\SOFTWARE\Wow6432Node\.NETFramework` registry key and change the **EnableIEHosting** value to **1**.
+2.  **For x64 systems or for 64-bit processes on x64 systems:** Go to the `HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework` registry key and change the **EnableIEHosting** value to **1**.
+
+If 'EnableIEHosting' does not exist, create it as a new REG_DWORD and give it a value of '1'.
 
 For more information, see the [Web Applications](https://go.microsoft.com/fwlink/p/?LinkId=308903) section of the Application Compatibility in the .NET Framework 4.5 page.
 
